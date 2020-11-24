@@ -346,7 +346,7 @@ Une équipe dynamique pour votre prise en charge avec :
  <div class="col-lg-4 col-md-6 footer-links">
             <h4>Horraire d'ouverture </h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> Du Samedi au mercredi : 08H30 à 17H00</li>
+              <li><i class="bx bx-chevron-right"></i> Du Samedi au Mercredi : 08H30 à 17H00</li>
               <li><i class="bx bx-chevron-right"></i> Jeudi & Vendredi : Weekend</li>
             </ul>
           </div>
@@ -393,17 +393,20 @@ Une équipe dynamique pour votre prise en charge avec :
     var form_id_js = "javascript_form";
 
     var data_js = {
-        "access_token": "5syefa83rs5ez0x4o4grj6uw" // sent after you sign up
+        "access_token": "mbkq71tancunz6icufltc2dz" // sent after you sign up
     };
 
     function js_onSuccess() {
         // remove this to avoid redirect
+        window.alert("Message envoyé avec succés, Merci de nous avoir contacté!");
         window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+        
     }
 
     function js_onError(error) {
         // remove this to avoid redirect
-        window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+        //window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+        window.alert("Erreur, Merci de verifier votre message!");
     }
 
     var sendButton = document.getElementById("js_send");
@@ -424,8 +427,9 @@ Une équipe dynamique pour votre prise en charge avec :
         var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
         var msj2 = document.querySelector("#" + form_id_js + " [name='email']").value;
         var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+        var nom = document.querySelector("#" + form_id_js + " [name='name']").value;
         data_js['subject'] = subject;
-        data_js['text'] = 'Email: '+msj2+'  Message: '+message;
+        data_js['text'] = 'Envoyé par: '+nom+'\n'+'Email: '+msj2+'\n'+'Message: '+'\n'+message;
         var params = toParams(data_js);
 
         request.open("POST", "https://postmail.invotes.com/send", true);
@@ -451,7 +455,7 @@ Une équipe dynamique pour votre prise en charge avec :
     js_form.addEventListener("submit", function (e) {
         e.preventDefault();
     });
-</script
+    </script>
 
 </body>
 

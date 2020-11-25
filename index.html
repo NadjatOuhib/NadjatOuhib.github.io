@@ -279,17 +279,18 @@ Une équipe dynamique pour votre prise en charge avec :
               </div>
               <div class="form-group">
                  
-                  <select for="cars"  class="form-control" name="subject" id="subject" data-rule="minlen:4" name="cars" id="cars">
+                  <select onchange="handleSelectChange(event)" for="cars"  class="form-control" name="subject" id="subject" data-rule="minlen:4" name="cars" id="cars">
 
  <option value="" disabled selected>Selectionnez votre sujet</option>
-  <option value="Contentieux Fiscal" class="form-control">Contentieux Fiscal</option>
-  <option value="saab" class="form-control">Audit Comptable</option>
-  <option value="saab" class="form-control">Audit Fiscal</option>
-  <option value="mercedes" class="form-control">Accompagnement en investissement</option>
-  <option value="audi" class="form-control">Communications</option>
- <option value="audi" class="form-control">Autres</option>
+  <option value="Contact Siteweb: Contentieux Fiscal" class="form-control">Contentieux Fiscal</option>
+  <option value="Contact Siteweb: Audit Comptable" class="form-control">Audit Comptable</option>
+  <option value="Contact Siteweb: Audit Fiscal" class="form-control">Audit Fiscal</option>
+  <option value="Contact Siteweb: Accompagnement en investissement" class="form-control">Accompagnement en investissement</option>
+  <option value="Contact Siteweb: Communications" class="form-control">Communications</option>
+ <option value="Contact Siteweb: Autres" class="form-control">Autres</option>
 </select>
-  
+
+
                 <div class="validate"></div>
               </div>
               <div class="form-group">
@@ -399,13 +400,13 @@ Une équipe dynamique pour votre prise en charge avec :
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
     <script>
-
+var value;
     //update this with your js_form selector
     var form_id_js = "javascript_form";
 
     var data_js = {
-       // "access_token": "mbkq71tancunz6icufltc2dz" // sent after you sign up
-        "access_token": "5syefa83rs5ez0x4o4grj6uw" // sent after you sign up
+        "access_token": "mbkq71tancunz6icufltc2dz" // sent after you sign up
+         // "access_token": "5syefa83rs5ez0x4o4grj6uw" // sent after you sign up
     };
 
     function js_onSuccess() {
@@ -420,6 +421,13 @@ Une équipe dynamique pour votre prise en charge avec :
         //window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
         window.alert("Erreur, Merci de verifier votre message!");
     }
+            function handleSelectChange(event) {
+
+    var selectElement = event.target;
+
+     value = selectElement.value;
+           // alert(value);
+}
 
     var sendButton = document.getElementById("js_send");
 
@@ -436,13 +444,14 @@ Une équipe dynamique pour votre prise en charge avec :
             }
         };
 
-        var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+      // var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+        var subject = value;
       //  var e = document.getElementById("subject");
      // var subject = e.options[e.selectedIndex].text;
         var msj2 = document.querySelector("#" + form_id_js + " [name='email']").value;
         var message = document.querySelector("#" + form_id_js + " [name='text']").value;
         var nom = document.querySelector("#" + form_id_js + " [name='name']").value;
-        data_js['subject'] = msj2;
+        data_js['subject'] = subject;
         data_js['text'] = 'Envoyé par: '+nom+'\n'+'Email: '+msj2+'\n'+'Message: '+'\n'+message;
         var params = toParams(data_js);
 
@@ -465,6 +474,12 @@ Une équipe dynamique pour votre prise en charge avec :
         return form_data.join("&");
     }
 
+    
+
+        
+        
+        
+        
     var js_form = document.getElementById(form_id_js);
     js_form.addEventListener("submit", function (e) {
         e.preventDefault();

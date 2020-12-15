@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" >
 
 <head>
   <meta charset="utf-8">
@@ -34,12 +34,14 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+
+    </head>
 
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
+      
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="index.html">C<span>.</span>A<span>.</span>F<span>.</span>E<span>.</span>M</a></h1>
@@ -47,31 +49,39 @@
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
+           
         <ul>
           <li class="active"><a class=" homee"href="#hero">Accueil</a></li>
             <li><a href="#about" class="about">À propos de nous</a></li>
           <li><a href="#services" class="services">Nos fonctionnalités </a></li>
+            
 			
 	
         </ul>
+         
       </nav><!-- .nav-menu -->
 
       <a href="#contact" class=" nous get-started-btn scrollto">Nous Contacter</a>
-        <div class="langWrap">
-			<a href="index.html" language='french' onclick="document.body.setAttribute('dir', 'ltr')" ><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="Français" src="assets/img/fr.jpg" width="30" height="30">
-</a>
-			<a href="#hero" language='english' onclick="document.body.setAttribute('dir', 'ltr')"><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="English" src="assets/img/eng.jpg" width="30" height="30"></a>
-			<a href="#" language='arabic' onclick="document.body.setAttribute('dir', 'rtl')"><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="العربية" src="assets/img/ar.png" width="30" height="30"></a>
-		</div>
+        
 
     </div>
   </header><!-- End Header -->
-
+      
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
+
     <div class="container" data-aos="fade-up">
+         <div class="langWrap"  style=" position: relative; margin-left: 87%;margin-top: -15%;">
+			<a href="#" language='french' onclick="document.body.setAttribute('dir', 'ltr')" ><img  alt="" src="assets/img/hero-bg.jpg" width="0" height="0">
+</a>
+             <a href="index.html" language='french' onclick="document.body.setAttribute('dir', 'ltr')" ><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="Français" src="assets/img/fr.jpg" width="30" height="30">
+</a>
+			<a href="#" language='english' onclick="document.body.setAttribute('dir', 'ltr')"><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="English" src="assets/img/eng.jpg" width="30" height="30"></a>
+			<a href="#" language='arabic' onclick="document.body.setAttribute('dir', 'rtl');"><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="العربية" src="assets/img/ar.png" width="30" height="30"></a>
+              <a href="#" language='espagnol' onclick="document.body.setAttribute('dir', 'ltr');"><img style="border-radius: 50%; border: 1px solid rgb(207, 214, 20);" alt="English" src="assets/img/esp.jpg" width="30" height="30"></a>
+		</div>
 <br/>
-        
+       
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-10 col-lg-10">
             <h1 class="title">CABINET DE CONSEIL FISCAL</h1>
@@ -280,7 +290,7 @@
   <option value="Contact Siteweb: Audit Fiscal" class="form-control f8">Audit Fiscal</option>
   <option value="Contact Siteweb: Contentieux Fiscal" class="form-control f9">Contentieux Fiscal</option>
   <option value="Contact Siteweb: Accompagnement en investissement" class="form-control f10">Accompagnement en investissement</option>
-  <option value="Contact Siteweb: Communications" class="form-control">Communications</option>
+  <option value="Contact Siteweb: Communications" class="form-control f77">Communications</option>
  <option value="Contact Siteweb: Autres" class="form-control f11">Autres</option>
 </select>
 
@@ -534,6 +544,7 @@ var value;
         const aa5 = document.querySelector('.a5');
         const aa6 = document.querySelector('.a6');
         const aaa1 = document.querySelector('.aaa');
+        const f777 = document.querySelector('.f77');
        
 
 		link.forEach(el => {
@@ -575,7 +586,7 @@ var value;
                 pp9.textContent = data[attr].p9;
                 pp10.textContent = data[attr].p10;
                 
-                ff1.textContent = data[attr].f1;
+                f777.textContent = data[attr].f77;
                 ff2.textContent = data[attr].f2;
                 ff3.textContent = data[attr].f3;
                 ff4.textContent = data[attr].f4;
@@ -701,7 +712,7 @@ var value;
 			  "arabic": 
 			  {
                
-			    "homee": "الرئيسية",
+			    "homee": "الرئيسية            ",
 			    "about": 
 				    "من نحن؟",
                 "services": 
@@ -727,7 +738,7 @@ var value;
                   "s5": 
 				    "مساعدات متنوعة",
                   "s6": 
-				    "فريف ديناميكي لدعمك بميزات عديدة:",
+				    "فريق ديناميكي لدعمك بميزات عديدة:",
                   "s7": 
 				    "احترافية",
                   "s8": 
@@ -767,15 +778,15 @@ var value;
                   "f6": 
 				    "اختر الموضوع",
                   "f7": 
-				    "Accounting Audit",
+				    "التدقيق المحاسبي",
                   "f8": 
-				    "Tax audit",
+				    "تدقيق الضريبي",
                   "f9": 
-				    "Tax Litigation",
+				    "التقاضي الضريبي",
                   "f10": 
-				    "Investment support",
+				    "دعم الاستثمار",
                   "f11": 
-				    "Others",
+				    "اخر",
                   "f12": 
 				    "ابعث رسالة",
                   "a1": 
@@ -791,29 +802,116 @@ var value;
                   "a6": 
 				    "الخميس و الجمعة : عطلة نهاية الاسبوع",
                   "aaa": 
-				    "البريد الالكتروني"
+				    "البريد الالكتروني",
+                  "f77": 
+				    "تواصل"
                  
 			  },
-//			  "french": 
-//			  {
-//			     "homee": "Accueil",
-//			    "about":  "À propos de nous",
-//                "services": "Nos fonctionnalités",
-//                "title": "CABINET DE CONSEIL FISCAL",
-//                  "nous":"Nous Contacter",
-//                  "t11":"Conseil",
-//                  "t22":"Assistance Fiscale Etendue",
-//                  "t33": "Médiation",
-//                  "z1": 
-//				    "C",
-//                  "z2": 
-//				    "A",
-//                  "z3": 
-//				    "M"
-//			  }
+			  "espagnol": 
+			  {
+                  
+			     "homee": "Principal",
+			    "about": 
+				    "quienes somos?",
+                "services": 
+				    "Nuestros servicios",
+                "title": 
+				    "Firma de Consultoría Fiscal",
+                  "nous": 
+				    "llama nos",
+                  "t11": 
+				    "Consejos",
+                  "t22": 
+				    "Ayuda fiscal anticipada",
+                  "t33": 
+				    "mediación",
+                  "s1": 
+				    "Bajo la supervisión de un equipo profesional te ofrece:",
+                  "s2": 
+				    "Gran recepción",
+                  "s3": 
+				    "Consejos importantes",
+                  "s4": 
+				    "Soporte de combustión",
+                  "s5": 
+				    "Ayuda Miscelánea",
+                  "s6": 
+				    "Perfil dinámico para respaldarlo con muchas funciones:",
+                  "s7": 
+				    "Profesional",
+                  "s8": 
+				    "Desarrollo continuo",
+                  "s9": 
+				    "Vista previa precisa",
+                  "p1": 
+				    "caracteristicas",
+                  "p2": 
+				    "CAFEM te garantiza:",
+                  "p3": 
+				    "  Una recepción completa de nuestro equipo",
+                  "p4": 
+				    "Escuche bien todos los requerimientos de nuestros clientes ",
+                  "p5": 
+				    "Intervenciones en varios campos",
+                  "p6": 
+				    "Derecho tributario, derecho empresarial, apoyo a la inversión, asistencia continua profesional y completa",
+                  "p7": 
+				    "Un equipo está a su servicio en los campos de nuestra especialización",
+                  "p8": 
+				    "Información, supervisión e implementación de trabajos prácticos",
+                  "p9": 
+				    " اReuniones y eventos para asegurar un contacto constante",
+                  "p10": 
+				    "Seminarios renovados y variados en nuestro campo (legislación financiera ...)",
+                  "f1": 
+				    "Conéctate con nosotros  ",
+                  "f2": 
+				    "Ubicación",
+                  "f3": 
+				    "23 rue Mazouni Bouamrane (Ex Lamartine) cerca del Boulevard de l'ALN (Ex Front de mer), Orán",
+                  "f4": 
+				    "el teléfono",
+                  "f5": 
+				    "hiiiii",
+                  "f6": 
+				    "Elige el tema",
+                  "f7": 
+				    "Auditoría contable",
+                  "f8": 
+				    "Auditoria de impuestos",
+                  "f9": 
+				    "Litigio fiscal",
+                  "f10": 
+				    "Apoyo a la inversión",
+                  "f11": 
+				    "más",
+                  "f12": 
+				    "enviar un mensaje",
+                  "a1": 
+				    "Ubicación",
+                  "a2": 
+				    "23 rue Mazouni Bouamrane (Ex Lamartine) cerca del Boulevard de l'ALN (Ex Front de mer), Orán.",
+                  "a3": 
+				    "el teléfono",
+                  "a4": 
+				    "Horas Laborales",
+                  "a5": 
+				    " De sábado a miércoles de 08:30 a 17:00",
+                  "a6": 
+				    "Jueves y viernes: el fin de semana",
+                  "aaa": 
+				    "اEmail",
+                  "f77": 
+				    "comunicación"
+			  }
 			}
 	</script>
-
+    <script>
+function fct1() {
+   document.getElementsByClassName('langWrap').style.cssText = "position: fixed; margin-left: 20px;margin-top: 5px;";
+   document.body.setAttribute('dir', 'ltr')
+}
+        </script>
 </body>
 
 </html>
